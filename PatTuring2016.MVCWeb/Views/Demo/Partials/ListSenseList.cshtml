@@ -1,0 +1,6 @@
+﻿@model List<PatTuring2016.Common.ScreenModels.PartDisplays.SenseListModel>
+
+@foreach (var item in Model.Where(item => item != null).Where(item => item.Title != "Licensor"))
+{
+    @Html.Partial("Partials/MoreSenseList", item)
+}
